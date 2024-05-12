@@ -50,6 +50,20 @@ class Star(object):
     # Hago la función para calcular la luminosidad en la secuencia principal de la estrella
     def luminosidad_sec_principal(self) -> float:
         L_sun = 3.828e26
-        M_sun = 1.989e30
+        M_sun = 1
         L_ms = L_sun * (self._masa / M_sun) ** 3.5
         return L_ms
+    
+    def comparar_masa_con_sun(self):
+        M_sun = 1
+        if self._masa > M_sun:
+            return True
+        else:
+            return False
+        
+    def comparar_radio_con_sun(self):
+        R_sun = 1
+        if self._radio > R_sun:
+            return True
+        else:
+            return False

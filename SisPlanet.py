@@ -29,4 +29,4 @@ class SisPlanet(object):
         planetas_ordenados = sorted(planetas, key=lambda x: x.get_a())
         nombres_planetas_ordenados = [planeta.get_planet_name() for planeta in planetas_ordenados]
         return nombres_planetas_ordenados
- 
+    

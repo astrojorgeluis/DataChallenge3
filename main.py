@@ -64,6 +64,11 @@ for star in estrellas_existentes.values():
         Luminosidad en la secuencia principal: {star.luminosidad_sec_principal()}\n\
         Cantidad de planetas: {sistema_planetario.num_planetasxstar(star)}\n\
         Planetas ordenados: {sistema_planetario.ordenar_planetas_por_radio(star)}")
+    if star.comparar_masa_con_sun():
+            print("        La masa de esta estrella es mayor a la masa del Sol.")
+
+    if star.comparar_radio_con_sun():
+        print("        El radio de esta estrella es mayor al radio del Sol.")
         
     print("  Planetas:")
     for planeta in star.get_add_planet():
