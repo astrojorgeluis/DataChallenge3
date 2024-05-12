@@ -32,3 +32,12 @@ class ExoPlanet(Planet):
     def inclinacion_de_planeta(self):
         return self.get_i()
     
+    # Función para verificar si la masa del planeta es mayor a la masa de Júpiter
+    def es_mayor_que_tierra(self):
+        masa_jupiter = 1.898e27  # Masa de Júpiter en kg
+        masa_tierra = 5.972e24  # Masa de la Tierra en kg
+        masa_tierra_jupiter = masa_tierra / masa_jupiter
+        if self.get_masa() > masa_tierra_jupiter:
+            return True
+        else:
+            return False

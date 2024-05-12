@@ -74,5 +74,7 @@ for star in estrellas_existentes.values():
         Inclinacion del planeta: {planeta.inclinacion_de_planeta()}")
         if planeta.metodo_descubrimiento() == 'Primary Transit':
             print(f"        Parametro de impacto: {planeta.par_impacto(star)}")
-        print()
 
+        if planeta.es_mayor_que_tierra():
+            print("        La masa de este planeta es mayor a la masa de la Tierra.")
+        print()
