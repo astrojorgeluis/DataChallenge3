@@ -30,7 +30,7 @@ class ExoPlanet(Planet):
             
     # Método para obtener la inclinación del planeta
     def inclinacion_de_planeta(self):
-        return self.get_i()
+        return self.get_i() # Se podria implementar un metodo para convertir la inclinacion a grados o radianes
     
     # Función para verificar si la masa del planeta es mayor a la masa de Júpiter
     def es_mayor_que_tierra(self):

@@ -7,10 +7,10 @@ from Exoplanet import ExoPlanet
 
 
 # Lectura del archivo CSV
-data = pd.read_csv('e1n4AOA4.csv')
+data = pd.read_csv('e1n4AOA4.csv') # Me gustaria que el usuario seleccione el archivo a leer con una interfaz grafica
 
 # Lista de estrellas que se desean buscar
-estrellas_a_buscar = ['HR 8799', 'HD 202206 A', 'TRAPPIST-1', 'TOI-1338', 'HD 188753', 'Kepler-451', 'Kepler-16 (AB)']
+estrellas_a_buscar = ['HR 8799', 'HD 202206 A', 'TRAPPIST-1', 'TOI-1338', 'HD 188753', 'Kepler-451', 'Kepler-16 (AB)'] # Se podria implementar un input para que el usuario ingrese las estrellas a buscar
 
 # Instancia de la clase para almacenar sistemas planetarios
 sistema_planetario = SisPlanet()
@@ -46,7 +46,7 @@ for index, row in data.iterrows():
         planeta.set_metodo_descubrimiento(row['detection_type'])
         
         # Agrega el planeta al sistema planetario asociado con la estrella
-        sistema_planetario.add_planeta(star, planeta)
+        sistema_planetario.add_planeta(star, planeta) # Se podria hacer un metodo para agregar planetas a la estrella en la clase Star en vez de hacerlo en el main
 
 
 # Se verifica si alguna de las estrellas mencionadas en 'estrellas_a_buscar' no fue encontrada en la base de datos, y se imprime un mensaje en caso afirmativo
@@ -83,3 +83,5 @@ for star in estrellas_existentes.values():
         if planeta.es_mayor_que_tierra():
             print("        La masa de este planeta es mayor a la masa de la Tierra.")
         print()
+
+# Podria implementar que el print se copie en un archivo de texto para que el usuario pueda guardarlo

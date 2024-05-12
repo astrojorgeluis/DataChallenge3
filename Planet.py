@@ -44,6 +44,6 @@ class Planet(object):
     
     # Función para calcular el periodo de rotación kepleriana del planeta
     def periodo_rotacion_kepleriana(self) -> float:
-        G = 6.67408e-11
-        T = 2 * np.pi * np.sqrt((self.get_a()**3) / (G * self.get_masa()))
+        G = 6.67408e-11 # Me gustaria meter esta constante en un archivo de constantes para no tener que repetirla o agregar una libreria que contega todas las constantes fisicas
+        T = 2 * np.pi * np.sqrt((self.get_a()**3) / (G * self.get_masa())) # Si faltan datos no arroja un resultado, sino un mensaje de error
         return T
