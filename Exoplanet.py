@@ -16,7 +16,7 @@ class ExoPlanet(Planet):
         return self.metodo
     
     # Método para calcular el parámetro de impacto del planeta en caso de que el método de descubrimiento sea 'Primary Transit'
-    def par_impacto(self):
+    def par_impacto(self, star):
         b = (self.get_a()*np.cos(self.get_i())) * (1 - self.get_e()**2) / (star.get_radio()*(1 + self.get_e()*np.sin(self.get_w())))
         if np.isnan(b):
             return 'No se puede calcular por falta de datos.'
@@ -27,3 +27,8 @@ class ExoPlanet(Planet):
                 return 0
             else:
                 return 1
+            
+    # Método para obtener la inclinación del planeta
+    def inclinacion_de_planeta(self):
+        return self.get_i()
+    
