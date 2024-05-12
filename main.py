@@ -70,8 +70,9 @@ for star in estrellas_existentes.values():
         print(f"\
         Nombre: {planeta.get_planet_name()}\n\
         Periodo de rotacion kepleriana: {planeta.periodo_rotacion_kepleriana()}\n\
-        Metodos de descubrimiento: {planeta.metodo_descubrimiento()}")
+        Metodos de descubrimiento: {planeta.metodo_descubrimiento()}\n\
+        Inclinacion del planeta: {planeta.inclinacion_de_planeta()}")
         if planeta.metodo_descubrimiento() == 'Primary Transit':
-            print(f"        Parametro de impacto: {planeta.par_impacto()}")
+            print(f"        Parametro de impacto: {planeta.par_impacto(star)}")
         print()
 
